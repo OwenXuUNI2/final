@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-one</title>
+    <link rel="stylesheet" href="weekone.css">
+</head>
+<body>
+    <a href="spherical.html"><header><span>Interactive Media Week one</span></header></a>
+    <div class="image-container">
+        <img src="./Week 1 photos/teamlab-1.jpg" class="draggable" id="img1" alt="Image 1">
+        <img src="./Week 1 photos/teamlab-2.jpg" class="draggable" id="img2" alt="Image 2">
+        <img src="./Week 1 photos/teamlab-3.jpg" class="draggable" id="img3" alt="Image 3">
+        <img src="./Week 1 photos/website skeleton.jpg" class="draggable" id="img4" alt="Image 4">
+        <img src="./Week 1 photos/youtube from memory.jpg" class="draggable" id="img5" alt="Image 5">
+        <img src="./Week 1 photos/helloworld.png" class="draggable" id="img6" alt="img6">
+    </div>
+
+    <div class="draggable-box" id="textbox">
+        Week 1 showcases inclass activites such as "Human Computer In Your Face" where we learnt basics in developing interfaces and interactions and a tutorial on the basics of vscode through "Hello World". "Hunt N Gather" permitted us to find real example of interaction which in this case was my three photos of Tokyo Labs and how people interacted with it. This webpage was inspired by my tutor Matilda's workbook webpage example which showcased work through draggable objects which introduces a unique way of interaction. The inspiration: https://matildasutho.github.io/InteractiveMedia2024/Week2/MatildasWorkbook/index.html
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".draggable, .draggable-box");
+
+    elements.forEach(element => {
+        element.addEventListener("mousedown", onMouseDown);
+    });
+
+    function onMouseDown(event) {
+        event.preventDefault();
+
+        let element = event.target;
+        let shiftX = event.clientX - element.getBoundingClientRect().left;
+        let shiftY = event.clientY - element.getBoundingClientRect().top;
+
+        element.style.position = "absolute";
+        element.style.zIndex = 1000;
+        document.body.append(element);
+
+        function moveAt(pageX, pageY) {
+            element.style.left = pageX - shiftX + "px";
+            element.style.top = pageY - shiftY + "px";
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener("mousemove", onMouseMove);
+
+        element.onmouseup = function () {
+            document.removeEventListener("mousemove", onMouseMove);
+            element.onmouseup = null;
+        };
+    }
+
+    elements.forEach(element => {
+        element.ondragstart = () => false;
+    });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spherical</title>
+    <link rel="stylesheet" href="spherical.css">
+</head>
+
+<body>
+    <div id="full-circle"></div>
+
+    <div id="home">
+        <a href="index.html"><header>The Homepage</header></a>
+    </div>
+
+    <div class="container">
+        <button class="arrow left-arrow">
+            <img src="Arrow.png" alt="Left"/>
+        </button>
+        <div class="circle">
+                <iframe id="preview-frame" src="weekone.html"></iframe>
+        </div>
+        <button class="arrow right-arrow">
+            <img src="Arrow.png" alt="Right"/>
+        </button>
+    </div>
+
+    <script>
+        const pages = ["weekone.html","weektwo.html","weekthree.html"];
+        let currentIndex = 0;
+        const iframe = document.getElementById("preview-frame");
+
+        document.querySelector(".left-arrow").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + pages.length) % pages.length;
+        iframe.src = pages[currentIndex];
+        });
+
+        document.querySelector(".right-arrow").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % pages.length;
+            iframe.src = pages[currentIndex];
+        })
+
+        document.querySelector(".circle").addEventListener("click", function() {
+        const iframe = document.querySelector(".circle iframe");
+        if (iframe && iframe.src) {
+            window.location.href = iframe.src; 
+        }
+        });
+    </script>
+</body>

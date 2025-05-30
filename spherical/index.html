@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <div id="full-circle"></div>
+
+    <div id="title">
+      <h1>Welcome to the Workbook</h1>
+    </div>
+    <div id="circle"></div>
+    <a href="https://github.com/OwenXuUNI"><h2 id="owen">Owen Xu</h2></a>
+
+    <script>
+document.getElementById("circle").addEventListener("click", function() {
+    this.style.transition = "transform 1.5s ease-in-out";
+    this.style.transform = "scale(40)";
+    this.style.backgroundColor = "white";
+
+    setTimeout(function() {
+        window.location.href = "spherical.html"; 
+    }, 1500);
+});
+    </script>
+</body>
+</html>

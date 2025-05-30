@@ -1,0 +1,79 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow: hidden;
+            scrollbar-width: none;
+        }
+        
+        body {
+            height:100vh;
+            width:100vw;
+            /*background patterns borrowed from https://www.magicpattern.design/tools/css-backgrounds?ref=reddit-frontend */
+            background-color: #000000;
+            opacity: 1;
+            background-image:  linear-gradient(#ff0000 1.2000000000000002px, transparent 1.2000000000000002px), linear-gradient(90deg, #ff0000 1.2000000000000002px, transparent 1.2000000000000002px), linear-gradient(#ff0000 0.6000000000000001px, transparent 0.6000000000000001px), linear-gradient(90deg, #ff0000 0.6000000000000001px, #000000 0.6000000000000001px);
+            background-size: 30px 30px, 30px 30px, 6px 6px, 6px 6px;
+            background-position: -1.2000000000000002px -1.2000000000000002px, -1.2000000000000002px -1.2000000000000002px, -0.6000000000000001px -0.6000000000000001px, -0.6000000000000001px -0.6000000000000001px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        header {
+            height: 10vh;
+            background-color: black;
+            font-size: 80px;
+            color:red;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            transition: 0.5s;
+            padding: 20px;
+        }
+
+        header span{
+            display: inline-block;
+            transition: transform 0.5s, color 0.5s
+        }
+
+        header:hover span{
+            transform: scale(1.05);
+            color: white;
+            transition: 0.5s;
+        }
+
+        .image-container{
+            position:relative;
+        }
+
+        #img1 { top: 50px; left: 180px; }
+        #img2 { top: 240px; left: 500px; }
+        #img3 { top: 380px; left: 480px; }
+        #img4 { top: 150px; left: 730px; }
+        #img5 { top: 550px; left: 950px; }
+        #img6 { top: 0px; left: 50px;}
+
+        .draggable {
+            position: absolute;
+            width: 20vw;
+            height: auto;
+            cursor: grab;
+        }
+
+        .draggable-box {
+            position: absolute;
+            width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            font-size: 16px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            border-radius: 8px;
+            cursor: grab;
+            top: 40vh;
+            left: 50px;
+        }

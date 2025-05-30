@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    background-color: black;
+}
+
+header {
+    height: 10vh;
+    background-color: black;
+    font-size: 80px;
+    color:blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+header span{
+    display: inline-block;
+    transition: transform 0.5s, color 0.5s
+}
+
+header:hover span{
+    transform: scale(1.05);
+    color: white;
+    transition: 0.5s;
+}
+#homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homepage1 {
+    width:85vw;
+    height:auto;
+    border: 5px solid blue;
+}
+
+#homepage-text {
+    padding: 20px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+#welcomepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcomepage1 {
+    margin-top: 150px;
+    width:85vw;
+    height:auto;
+    border: 5px solid blue;
+}
+
+#welcomepage-text {
+    margin-top: 150px;
+    padding: 20px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+#webflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#webflow1 {
+    margin-top: 150px;
+    width:85vw;
+    height:auto;
+    border: 5px solid blue;
+}
+
+#webflow-text {
+    margin-top: 150px;
+    padding: 20px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+#workshop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#workshop1 {
+    margin-top: 150px;
+    width:85vw;
+    height:auto;
+    border: 5px solid blue;
+}
+
+#workshop-text {
+    margin-top: 150px;
+    padding: 20px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+h2{
+    margin-top: 35px;
+    font-size: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blue;
+}
+
+#hunt {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding-bottom: 75px;
+}
+
+#hunt a {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+h3{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    transition: 0.5s;
+}
+
+h3:hover{
+    color: black;
+    transition: 0.5s;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:50px;
+    background-color: blue;
+    color: white;
+    text-align: center; 
+}

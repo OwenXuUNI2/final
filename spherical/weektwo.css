@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+a{
+    text-decoration: none;
+    color: black'
+}
+
+img{    
+    width:25vw;
+    height: auto;
+    transition: 0.5s;
+}
+
+img:hover   {
+    width:27vw;
+    height:auto;
+    transition: 0.5s;
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    background-color: black;
+}
+
+header {
+    height: 10vh;
+    background-color: black;
+    font-size: 80px;
+    color:green;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+header span{
+    display: inline-block;
+    transition: transform 0.5s, color 0.5s
+}
+
+header:hover span{
+    transform: scale(1.05);
+    color: white;
+    transition: 0.5s;
+}
