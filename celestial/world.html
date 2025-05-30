@@ -1,0 +1,126 @@
+<!-- Note that chatgpt has been used to refine and debug some of the code -->
+
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World</title>
+    <link rel="stylesheet" href="world.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="world.js"></script>
+    <script>
+      function toggleText() {
+        const textDiv = document.getElementById("text");
+        if (textDiv.style.display === "none" || textDiv.style.display === "") {
+          textDiv.style.display = "block";
+        } else {
+          textDiv.style.display = "none";
+        }
+      }
+
+      function disableMouse() {
+        document.body.style.pointerEvents = 'none';
+      }
+
+      function enableMouse() {
+        document.body.style.pointerEvents = 'auto'; 
+      }
+
+      function temporarilyDisableMouse() {
+        disableMouse();
+        setTimeout(function() {
+        enableMouse();
+        }, 11000); 
+      }
+  
+      window.onload = function() {
+        temporarilyDisableMouse();
+
+        const bgMusic = document.getElementById("bg-music");
+          if (bgMusic) {
+          bgMusic.volume = 0.1;
+        }
+      };
+
+      function toggleMusic() {
+         const bgMusic = document.getElementById("bg-music");
+         const button = document.getElementById("music-toggle");
+    
+       if (bgMusic.paused) {
+          bgMusic.play();
+          button.textContent = "🔊";
+         } else {
+          bgMusic.pause();
+          button.textContent = "🔇";
+         }
+      }
+
+      function scaleToFit() {
+        const container = document.getElementById('container-wrapper');
+        const scaleX = window.innerWidth / 1605;
+        const scaleY = window.innerHeight / 874;
+        const scale = Math.min(scaleX, scaleY);
+        container.style.transform = `scale(${scale})`;
+      }
+
+  window.addEventListener('resize', scaleToFit);
+  window.addEventListener('load', scaleToFit);
+    </script>
+  </head>
+  <body>
+    <div id="scale-wrapper">
+    <div id="container-wrapper">
+    <div id="container">
+      <div id="fade-overlay"></div>
+      <div id="canvas-container"></div>
+    <a href="face.html" target="_blank" rel="noopener noreferrer">
+      <div class="jupiter-button">
+        <div id="jupiter-popup"><p id="jupiter-text">Enter Atlas-001</p></div>
+      </div>
+    </a>
+
+    <a href="click.html" target="_blank" rel="noopener noreferrer">
+      <div class="earth-button">
+        <div id="earth-popup"><p id="earth-text">Enter Cressedia-002</p></div>
+      </div>
+    </a>
+
+    <a href="data.html" target="_blank" rel="noopener noreferrer">
+      <div class="merc-button">
+        <div id="merc-popup"><p id="merc-text">Enter Altair-003</p></div>
+      </div>
+    </a>
+
+    <a href="celestial.html" target="_blank" rel="noopener noreferrer">
+      <div class="sun-button">
+        <div id="sun-popup"><p id="sun-text">Enter Callisto-004</p></div>
+      </div>
+    </a>
+    
+
+    <img id="img" src="help.png" onclick="toggleText()"/>
+
+    <button id="music-toggle" onclick="toggleMusic()">🔊</button>
+
+    <a href="gallery.html"><button id="gallery">✍️</button></a>
+
+
+    <div id="text">
+      <p>Welcome to Celestial. Celestial is an evolution of my previous workbook “Spherical” however this time I delve into the cosmos. For me, the internet is a huge maze full of places to discover and explore, a presentation of numerous opportunities, this shares many similarities with the cosmos, both are a vast expansion of near infinite possibilities. </p>
+      <p>The user is seen as a celestial being, although all powerful, they are still at the mercy of the world around them.  </p>
+      <p>As a celestial being on this page, it is your job to navigate this world, one that is full of interaction. Take a while and breathe in the atmosphere, become visually stimulated, enter an auditory trance, push your physical limits, after all this is exploration. I hope you enjoy Celestial - Owen</p>
+      <a href="index.html">"This is too much, Take me back" (WARNING WILL LEAVE THE PAGE)</a>
+    </div>
+  </div
+</div>
+</div>
+
+<audio id="bg-music" autoplay loop>
+  <source src="music/ambience.mp3" type="audio/mpeg">
+</audio>
+
+  </body>
+</html>

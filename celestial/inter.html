@@ -1,0 +1,97 @@
+<!-- Note that chatgpt has been used to refine and debug some of the code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #text-container {
+      font-family: "Shadows Into Light", cursive;
+      font-size: 60px;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .big {
+      font-size: 200px;
+    }
+    
+    a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      font-family: "Shadows Into Light", cursive;
+    }
+
+    a:hover{
+      font-size: 28px;
+      color: red;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="text-container"></div>
+    <a href="world.html">Skip</a>
+    <script>
+      const phrases = [
+        "The internet...",
+        "A vast subject for exploration",
+        "It shares many qualities with the cosmos",
+        "Just waiting for discovery",
+        "Welcome to",
+        "<span class='big'>Celestial</span>"
+      ];
+  
+      const textContainer = document.getElementById("text-container");
+      let index = 0;
+  
+      function showNextPhrase() {
+        textContainer.style.opacity = 0;
+  
+        setTimeout(() => {
+          textContainer.innerHTML = phrases[index];
+          textContainer.style.opacity = 1;
+  
+          index++;
+  
+          if (index < phrases.length) {
+            setTimeout(showNextPhrase, 2500); 
+          } else {
+            setTimeout(() => {
+        textContainer.style.opacity = 0; 
+
+        setTimeout(() => {
+          window.location.href = "world.html";
+        }, 2000); 
+      }, 2500); 
+    }
+  }, 2000); 
+}
+  
+      showNextPhrase();
+    </script>
+</body>
+</html>

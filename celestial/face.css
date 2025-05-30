@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: url('models/cursor.png') 16 16, auto;
+  width: 200vw;
+}
+
+canvas {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  
+}
