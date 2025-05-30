@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RETROSPEKT</title>
+  <link rel="stylesheet" href="retrospekt.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- These <script> codes have been generated with chatgpt  -->
+  <script>
+    function changeIframeSrc(url) {
+      document.getElementById('myIframe').src = url;
+    }
+
+    const infoData = {
+      'info-a': `<ul>
+                  <li>Circuit 7: Light Dimmer</li>
+                  <li>Introduction: Circuit first made in Week 7 Workshop BLINK!</li>
+                  <li>Components: Breadboard, Arduino, Potentiometer, LED, Resistor, Wires</li>
+                  <li>Function: LED intensity is controlled by the Potentiometer</li>
+                  <li>* 3D Model available in main window *</li>
+                </ul>`,
+      'info-b': `<ul>
+                  <li>Circuit 8: Photo Servo</li>
+                  <li>Introduction: Circuit first made in Week 8 Workshop TOUCH!</li>
+                  <li>Components: Breadboard, Arduino, Photoresistor, Micro Servo, Resistor, Wires</li>
+                  <li>Function: Servo Motor Hand moves according to how much light the photoresistor captures, code is used to obtain the data from the photoresistor</li>
+                  <li>* 3D Model available in main window *</li>
+                </ul>`,
+      'info-c': `<ul>
+                  <li>Circuit 9: Serial Port</li>
+                  <li>Introduction: Circuit first made in Week 9 Workshop</li>
+                  <li>Components: Breadboard, Arduino, Potentiometer, LED, Wires</li>
+                  <li>Function: Utilizes Web Serial API to interact with p5 sketches, in this case code is used to control the brightness of the sketch. LED is used for troubleshooting</li>
+                  <li>* 3D Model available in main window *</li>
+                </ul>`,
+      'info-d': `<ul>
+                  <li>** REFLECTION IN PROCESS, NO INFO TO DISPLAY **</li>
+                </ul>`
+    };
+
+    function showInfo(key) {
+      const container = document.getElementById("info");
+      container.innerHTML = infoData[key];
+    }
+
+    function togglePopUp() {
+      const PopUpDiv = document.getElementById("pop-up");
+        if (PopUpDiv.style.display === "none" || PopUpDiv.style.display === "") {
+          PopUpDiv.style.display = "block";
+        } else {
+          PopUpDiv.style.display = "none";
+      }
+    }
+ 
+  </script>
+</head>
+<body>
+  <div id="sidebar">
+  <div id="title">
+    <h1 onclick="togglePopUp()">RETROSPEKT</h1>
+  </div>
+
+  <div id="nav-container">
+    <header id="first-header">ClassCircuits</header>
+    <button id="button-one" onclick="changeIframeSrc('a.html'); showInfo('info-a')">7</button>
+    <button id="button-two" onclick="changeIframeSrc('b.html'); showInfo('info-b')">8</button>
+    <button id="button-three" onclick="changeIframeSrc('c.html'); showInfo('info-c')">9</button>
+
+    <header id="second-header">ClassReflection</header>
+    <button id="button-four" onclick="changeIframeSrc('weekseven.html'); showInfo('info-d')">7</button>
+    <button id="button-five" onclick="changeIframeSrc('weekeight.html'); showInfo('info-d')">8</button>
+    <button id="button-six" onclick="changeIframeSrc('weeknine.html'); showInfo('info-d')">9</button>
+  </div>
+
+  <div id="info-container">
+      <header id="info-header">CircuitInformation</header>
+      <div id="info">
+          <ul>
+            <li>**CHOOSE A CIRCUIT TO START**</li>
+         </ul>
+      </div>
+
+      <div id="return">
+        <a href="index.html">Return Home</a>
+      </div>
+
+    </div> 
+</div>
+
+  <div id="content-container">
+    <iframe id="myIframe" src="screen.html" title="Week 7"></iframe>
+  </div>
+
+<div id="pop-up">
+  <p>Welcome to Retrospket, A work book inspired by the retro technology in the 1970s and 1980s and The 1999 film "The Matrix"</p>
+  <p>So why Retrospekt? When originally starting the physical computing workshops, It took me back, seeing all the primitive machines and how it functions with code reminded me of retro technology and how the computer is just made of code as well. Hence the I played on the word "retrospect" which is like looking back to the past</p>
+  <p>As a way to document my physical computing, I had made a 3d model of a circuit we made every week documenting its function and other information along with it, I had also added a reflection for each week.</p>
+  <p>Take a look and I hope you enjoy Retrospekt - Owen</p>
+</div>
+</body>

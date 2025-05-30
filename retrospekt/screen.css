@@ -1,0 +1,27 @@
+body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    position: absolute;
+    font-family: 'Press Start 2P', monospace;
+    color:#00ff00;
+    text-shadow: 0 0 3px #00ff00;
+    top:45%;
+    left:12%;
+    animation: flick 1.5s infinite;
+}
+
+@keyframes flick{
+    0%, 100% {
+    color:#00ff00;
+    text-shadow: 0 0 3px #00ff00;
+    }
+
+    50% {
+    color:black;
+    text-shadow: 0 0 3px black;
+    }
+}

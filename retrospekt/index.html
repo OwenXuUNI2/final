@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Welcome</title>
+</head>
+<body>
+  <div id="overlay"></div>
+    <div id="title">
+      <h1>Lets Rewind</h1>
+    </div>
+    <div id="circle"></div>
+    <div id="owen">
+        <a href="https://github.com/OwenXuUNI">Owen Xu</a>
+    </div>
+
+<!-- Script was generated with the assitance of Chatgpt -->
+    <script>
+    document.getElementById("circle").addEventListener("click", function() {
+      this.style.transition = "transform 1.5s ease-in-out";
+      this.style.transform = "scale(0)";
+      this.style.backgroundColor = "black";
+  
+    const overlay = document.getElementById("overlay");
+    overlay.style.opacity = 1;
+
+    const title = document.getElementById("title");
+    title.style.transition = "transform 1.5s ease-in-out";
+    title.style.transform = "scale(0)";
+
+    const owen = document.getElementById("owen");
+    owen.style.transition = "transform 1.5s ease-in-out";
+    owen.style.transform = "scale(0)";
+
+    setTimeout(function() {
+        window.location.href = "title.html"; 
+    }, 3000);
+});
+    </script>
+</body>
+</html>
